@@ -6,7 +6,8 @@ from django.views.generic import (
     DetailView,
     CreateView,
     UpdateView,
-    DeleteView
+    DeleteView,
+    View
     )
 from .models import Post
 
@@ -35,9 +36,18 @@ class UserPostListView(ListView):   # displaying all posts of a user
         user = get_object_or_404(User, username=self.kwargs.get('username'))
         return Post.objects.filter(author=user).order_by('-date_posted')
 
-
 class PostDetailView(DetailView):
     model = Post
+
+#class UserProfileView(DetailView):
+    #model = User
+    #def get_queryset(self):
+    #    user = get_object_or_404(User, username=self.kwargs.get('username'))
+    #    return User.objects.filter(author=user)
+    
+def userProfileView(request, username):
+    user = get_object_or_404(User,username=username)
+    return render(request,'blog/user_profile.html',{'user':user})
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
