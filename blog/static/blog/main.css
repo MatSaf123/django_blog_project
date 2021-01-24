@@ -1,3 +1,5 @@
+@import url('https:fonts.googleapis.com/css?family=Poppins:100.200,300,400,500,600,700,800,900');
+
 body {
   background: #fafafa;
   color: #333333;
@@ -13,7 +15,7 @@ ul {
 }
 
 .bg-steel {
-  background-color: #5f788a;
+  background-color: #1f154f;
 }
 
 .site-header .navbar-nav .nav-link {
@@ -82,3 +84,159 @@ a.article-title:hover {
 .account-heading {
   font-size: 2.5rem;
 }
+
+#upperButton{
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  padding: 6px 20px;
+  margin: 0px 6px;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+
+#lowerButton{
+  position: relative;
+  display: inline-block;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  border-radius: 40px;
+  background: linear-gradient(90deg,#0162c8,#55e7fc);
+}
+
+body {
+  --text-color: #222;
+  --bkg-color: #fff;
+}
+body.dark-theme {
+  --bkg-color: #192a47;
+  --text-color: #59606b;
+}
+
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: var(--bkg-color);
+}
+
+h1,
+p {
+  color: var(--text-color);
+}
+
+.box{
+  position: relative;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 40px;
+  background: #060c21;
+  transition: 0.5s; 
+}
+
+.box:hover{
+  height: 400px;
+}
+
+.box .imgBx{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  overflow: hidden;
+}
+
+.box .imgBx img{
+  max-width: 100%;
+  opacity: 0.3;
+  transition: 0.5s;
+}
+
+.box:hover .imgBx img{
+  opacity: 1;
+}
+
+.box:before{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -1;
+}
+
+.box:after{
+  content: '';
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  right: -2px;
+  bottom: -2px;
+  background: #fff;
+  z-index: -2;
+  filter: blur(40px);
+}
+
+.box:before,
+.box:after{
+  background: linear-gradient(235deg,#89ff00,#010615,#00bcd4);
+}
+
+.box:nth-child(2):before,
+.box:nth-child(2):after{
+  background: linear-gradient(235deg,#ff005e,#010615,#fbff00);
+}
+
+.box:nth-child(3):before,
+.box:nth-child(3):after{
+  background: linear-gradient(235deg,#772aff,#010615,#2196F3);
+}
+
+.box .content{
+  position: absolute;
+  bottom: 0;
+  left: 10px;
+  right: 10px;
+  bottom: 10px;
+  height: 90px;
+  background: rgba(0,0,0,0.4);
+  display: flex;
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.box:hover .content{
+  opacity: 1;
+}
+
+.box .content h2{
+  font-size: 20px;
+  color: #fff;
+  font-weight: 500;
+  line-height: 20px;
+  letter-spacing: 1px;
+}
+
+.box .content h2 span{
+  font-size: 14px;
+  color: #fff;
+  font-weight: 200;
+  letter-spacing: 2px;
+}
+
