@@ -27,7 +27,7 @@
     <header class="site-header">
         <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
             <div class="container">
-                <a class="navbar-brand mr-4" href="/">Django Blog</a>
+                <a class="navbar-brand mr-4" href="/">Blog</a>
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
                     aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -43,7 +43,7 @@
 
                     <!-- Navbar Center - Day mode/Night mode -->
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link btn-toggle" id="upperButton" href="">Toggle Dark Mode</a>
+                        
                     </div>
 
                     <!-- Navbar Right Side -->
@@ -77,13 +77,38 @@
             <!-- SIDE BAR -->
             <div class="col-md-4">
                 <div class="content-section">
-                    <h3>Our Sidebar</h3>
-                    <p class='text-muted'>You can put any information here you'd like.
+                    
+                    
                     <ul class="list-group">
-                        <li class="list-group-item list-group-item-light">Latest Posts</li>
-                        <li class="list-group-item list-group-item-light">Announcements</li>
-                        <li class="list-group-item list-group-item-light">Calendars</li>
-                        <li class="list-group-item list-group-item-light">etc</li>
+                        <a class="nav-item nav-link btn-toggle" id="toggleButton" href="">Toggle Dark Mode</a>
+
+                        <!-- CLOCK -->
+                          <div class="clock">
+                            <div class="hour">
+                                <div class="hr" id="hr"></div>
+                            </div>
+                            <div class="min">
+                                <div class="mn" id="mn"></div>
+                            </div>
+                            <div class="sec">
+                                <div class="sc" id="sc"></div>
+                            </div>
+                        </div>
+                        <script type="text/javascript">
+                          const deg = 6;
+                          const hr = document.querySelector("#hr");
+                          const mn = document.querySelector("#mn");
+                          const sc = document.querySelector("#sc");
+                          setInterval(() => {
+                            let day = new Date();
+                            let hh = day.getHours() * 30;
+                            let mm = day.getMinutes() * deg;
+                            let ss = day.getSeconds() * deg;
+                            hr.style.transform = `rotateZ(${hh+(mm/12)}deg)`;
+                            mn.style.transform = `rotateZ(${mm}deg)`;
+                            sc.style.transform = `rotateZ(${ss}deg)`;
+                          })
+                        </script>
                     </ul>
                     </p>
                 </div>

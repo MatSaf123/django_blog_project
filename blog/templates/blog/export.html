@@ -1,7 +1,7 @@
 {% extends "blog/base.html"%}
 {% block content %}
     <h1>Export formats</h1>
-    <div>
+    <div class="exportsDiv">
     	Table Post to CSV: <a class="btn btn-muted" href="{% url 'blog-export-csv' %}"><button>Export</button></a><br />
     	Table Post to JSON: <a class="btn btn-muted" href="{% url 'blog-export-json' %}"><button>Export</button></a>
     </div>
