@@ -8,18 +8,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
     <link rel="icon" href="https://icon-library.com/images/django-icon/django-icon-0.jpg">
-    
+
 
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
         integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
-        <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'blog/main.css' %}">
 
     {% if title %}
-        <title>Django Blog - {{ title }}</title>
+    <title>Django Blog - {{ title }}</title>
     {% else %}
-        <title>Django Blog</title>
+    <title>Django Blog</title>
     {% endif %}
 </head>
 
@@ -34,36 +34,24 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarToggle">
                     <div class="navbar-nav mr-auto">
-<<<<<<< HEAD
-                        <a class="nav-item nav-link" href="{% url 'blog-home' %}">Home</a>
-                        <a class="nav-item nav-link" href="{% url 'blog-about' %}">About</a>
-                        {% if user.is_superuser %}
-                        <a class="nav-item nav-link" href="{% url 'blog-export' %}">Export</a>
-                        {% endif %}
-
-=======
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'blog-home' %}">Home</a>
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'blog-about' %}">About</a>
->>>>>>> front-end
+                        {% if user.is_superuser %}
+                        <a class="nav-item nav-link" id="upperButton" href="{% url 'blog-export' %}">Export</a>
+                        {% endif %}
                     </div>
 
                     <!-- Navbar Center - Day mode/Night mode -->
                     <div class="navbar-nav mr-auto">
-                        <a class="nav-item nav-link btn-toggle" id="upperButton" href="">Toggle Dark Mode</a>            
+                        <a class="nav-item nav-link btn-toggle" id="upperButton" href="">Toggle Dark Mode</a>
                     </div>
 
                     <!-- Navbar Right Side -->
                     <div class="navbar-nav">
-                        {% if user.is_authenticated  %}
-<<<<<<< HEAD
-                        <a class="nav-item nav-link" href="{% url 'post-create' %}">Create Post</a>
-                        <a class="nav-item nav-link" href="{% url 'profile_edit' %}">Edit profile</a>
-                        <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
-=======
+                        {% if user.is_authenticated %}
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'post-create' %}">Create Post</a>
-                        <a class="nav-item nav-link" id="upperButton" href="{% url 'profile' %}">Profile</a>
+                        <a class="nav-item nav-link" id="upperButton" href="{% url 'profile_edit' %}">Edit Profile</a>
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'logout' %}">Logout</a>
->>>>>>> front-end
                         {% else %}
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'login' %}">Login</a>
                         <a class="nav-item nav-link" id="upperButton" href="{% url 'register' %}">Register</a>
@@ -78,11 +66,11 @@
         <div class="row">
             <div class="col-md-8">
                 {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{{message.tags}}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
+                {% for message in messages %}
+                <div class="alert alert-{{message.tags}}">
+                    {{ message }}
+                </div>
+                {% endfor %}
                 {% endif %}
                 {% block content %}{% endblock %}
             </div>
@@ -108,22 +96,22 @@
 
         const currentTheme = localStorage.getItem("theme");
         if (currentTheme == "dark") {
-          document.body.classList.add("dark-theme");
+            document.body.classList.add("dark-theme");
         }
 
         btn.addEventListener("click", function () {
-          document.body.classList.toggle("dark-theme");
+            document.body.classList.toggle("dark-theme");
 
-          let theme = "light";
-          if (document.body.classList.contains("dark-theme")) {
-            theme = "dark";
-          }
-          
-          localStorage.setItem("theme", theme);
+            let theme = "light";
+            if (document.body.classList.contains("dark-theme")) {
+                theme = "dark";
+            }
+
+            localStorage.setItem("theme", theme);
         });
     </script>
 
-    
+
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
