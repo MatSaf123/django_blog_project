@@ -1,3 +1,5 @@
+import csv
+
 from django.shortcuts import render, get_object_or_404
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
@@ -8,6 +10,7 @@ from django.views.generic import (
     UpdateView,
     DeleteView
     )
+from django.http import HttpResponse
 from .models import Post
 
 
@@ -74,3 +77,19 @@ class PostDeleteView(LoginRequiredMixin, UserPassesTestMixin, DeleteView):
 def about(request):
     return render(request, 'blog/about.html', {'title':'About'})
 
+def export(request):
+    return render(request, 'blog/export.html', {'title':'Export'})
+
+def export_csv(request):
+    response = HttpResponse(content_type='text/csv')
+
+    writer = csv.writer(response)
+    writer.writerow(['Title', 'Content', 'Date Posted', 'Author'])
+
+    for post in Post.objects.all().values_list('title', 'content', 'date_posted', 'author'):
+        writer.writerow(post)
+
+    response['Content-Disposition'] = 'attachment; filename="posts.csv"'
+    
+    return response
+    
