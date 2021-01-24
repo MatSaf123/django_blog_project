@@ -1,6 +1,7 @@
 import csv
 
 from django.shortcuts import render, get_object_or_404
+from django.core import serializers
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
 from django.contrib.auth.models import User
 from django.views.generic import (
@@ -93,3 +94,7 @@ def export_csv(request):
     
     return response
     
+def export_json(request):
+    data = Post.objects.filter(date_posted__isnull=False).order_by('-date_posted')
+    post_list = serializers.serialize('json', data)
+    return HttpResponse(post_list, content_type="text/json-comment-filtered")
