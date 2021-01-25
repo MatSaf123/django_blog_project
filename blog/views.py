@@ -44,10 +44,9 @@ class UserPostListView(ListView):   # displaying all posts of a user
 class PostDetailView(DetailView):
     model = Post
 
-#TODO: fix!! login_required?
 def userProfileView(request, username):
-    user = get_object_or_404(User,username=username)
-    return render(request,'blog/user_profile.html',{'user':user})
+    user = get_object_or_404(User, username=username)
+    return render(request,'blog/user_profile.html',{'user_data':user})
 
 class PostCreateView(LoginRequiredMixin, CreateView):
     model = Post
