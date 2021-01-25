@@ -1,7 +1,11 @@
 @import url('https:fonts.googleapis.com/css?family=Poppins:100.200,300,400,500,600,700,800,900');
 
+* {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
 body {
-  background: #fafafa;
+  background: #0b053d;
   color: #333333;
   margin-top: 5rem;
 }
@@ -31,15 +35,36 @@ ul {
 }
 
 .content-section {
-  background: #ffffff;
+  background: #605e73;
   padding: 10px 20px;
   border: 1px solid #dddddd;
   border-radius: 3px;
   margin-bottom: 20px;
+  color: white;
+}
+
+.register-form{
+  color: white;
+}
+
+.login-form{
+  color: white;
 }
 
 .article-title {
-  color: #444444;
+  color: #f1f0f5;
+}
+
+.article-author{
+  color: #07a9b8;
+}
+
+.article-history{
+  color: #f1f0f5;
+}
+
+.article-date{
+  color: #f1f0f5;
 }
 
 a.article-title:hover {
@@ -72,6 +97,22 @@ a.article-title:hover {
   width: 25px;
   height: 25px;
   vertical-align: middle;
+}
+
+#confirmation{
+  color: white;
+}
+
+.account-heading{
+  color: white;
+}
+
+.logout{
+  color: white;
+}
+
+#text-secondary{
+  color: white;
 }
 
 .account-img {
@@ -109,24 +150,7 @@ a.article-title:hover {
   background: linear-gradient(90deg,#0162c8,#55e7fc);
 }
 
-body {
-  --text-color: #222;
-  --bkg-color: #fff;
-}
 
-
-* {
-  font-family: Arial, Helvetica, sans-serif;
-}
-
-body {
-  background: var(--bkg-color);
-}
-
-h1,
-p {
-  color: var(--text-color);
-}
 
 .box{
   position: relative;
