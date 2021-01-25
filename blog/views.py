@@ -3,6 +3,7 @@ import csv
 from django.shortcuts import render, get_object_or_404
 from django.core import serializers
 from django.contrib.auth.mixins import LoginRequiredMixin, UserPassesTestMixin
+from django.contrib.auth.decorators import login_required
 from django.contrib.auth.models import User
 from django.views.generic import (
     ListView,
@@ -43,12 +44,7 @@ class UserPostListView(ListView):   # displaying all posts of a user
 class PostDetailView(DetailView):
     model = Post
 
-#class UserProfileView(DetailView):
-    #model = User
-    #def get_queryset(self):
-    #    user = get_object_or_404(User, username=self.kwargs.get('username'))
-    #    return User.objects.filter(author=user)
-    
+#TODO: fix!! login_required?
 def userProfileView(request, username):
     user = get_object_or_404(User,username=username)
     return render(request,'blog/user_profile.html',{'user':user})
