@@ -13,8 +13,8 @@
         {% csrf_token %}    <!-- required security token -->
         <fieldset class="form-group">
             <legend class="border-bottom mb-4">Profile info</legend>
-        {{ u_form|crispy }}
-        {{ p_form|crispy }}
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
         </fieldset>
         <div class="form-group">
             <button class="btn btn-outline-info" id="lowerButton" type="submit">Update profile</button>

@@ -3,7 +3,9 @@ from django.utils import timezone
 from django.contrib.auth.models import User
 from django.urls import reverse
 
+
 class Post(models.Model):
+    objects = None
     title = models.CharField(max_length=100)
     content = models.TextField()
     date_posted = models.DateTimeField(default=timezone.now)
@@ -12,6 +14,6 @@ class Post(models.Model):
     def __str__(self):
         return self.title
 
-    def get_absolute_url(self): # to redirect user to some page after post is created
+    def get_absolute_url(self):  # to redirect user to some page after post is created
         return reverse('blog-home')
-        #return reverse('post-detail', kwargs={'pk': self.pk})
+        # return reverse('post-detail', kwargs={'pk': self.pk})

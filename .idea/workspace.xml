@@ -1,7 +1,40 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="c024df24-be15-44e5-9b3a-ae19c5571613" name="Default Changelist" comment="" />
+    <list default="true" id="c024df24-be15-44e5-9b3a-ae19c5571613" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/blog/static/blog/light.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/django_blog_project.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/django_blog_project.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/blog/dark.css" beforeDir="false" afterPath="$PROJECT_DIR$/blog/static/blog/dark.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/static/blog/main.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/about.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/about.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/base.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/export.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/export.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/home.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_confirm_delete.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_confirm_delete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/post_form.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/post_form.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/templates/blog/user_posts.html" beforeDir="false" afterPath="$PROJECT_DIR$/blog/templates/blog/user_posts.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/blog/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/blog/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_project/__init__.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/__init__.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_project/asgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/asgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_project/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/settings.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_project/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/urls.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/django_blog_project/wsgi.py" beforeDir="false" afterPath="$PROJECT_DIR$/django_blog/wsgi.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/manage.py" beforeDir="false" afterPath="$PROJECT_DIR$/manage.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/media/profile_pics/profile_pic_2_sxK6Ijc.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/logout.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/logout.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/password_reset.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/password_reset.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/password_reset_complete.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/password_reset_complete.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/password_reset_confirm.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/password_reset_confirm.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/password_reset_done.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/password_reset_done.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/profile_edit.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/profile_edit.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/users/templates/users/register.html" beforeDir="false" afterPath="$PROJECT_DIR$/users/templates/users/register.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -16,10 +49,12 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="ASKED_SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -31,6 +66,8 @@
       <updated>1611537905171</updated>
       <workItem from="1611537907644" duration="2000" />
       <workItem from="1616192276906" duration="744000" />
+      <workItem from="1616193269299" duration="167000" />
+      <workItem from="1616193444133" duration="3812000" />
     </task>
     <servers />
   </component>
