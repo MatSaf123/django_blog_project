@@ -45,6 +45,11 @@ python manage.py runserver
     <img src="media/readme/login.gif" width="500" height="300"/>
 </div>
 
+### Main feed
+<div style="text-align:center">
+    <img src="media/readme/main_feed.png" width="500" height="250"/>
+</div>
+
 ### Dark mode
 <div style="text-align:center">
     <img src="media/readme/responsive_css.gif" width="500" height="300"/>
